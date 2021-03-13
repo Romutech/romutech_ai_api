@@ -130,4 +130,4 @@ fabric.properties
 .idea/**/markdown-navigator/
 .idea/$CACHE_FILE$
 .idea/codestream.xml
-env/*
+env/
