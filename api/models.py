@@ -3,6 +3,7 @@ from django.db import models
 
 
 class Photo(models.Model):
+    title = models.CharField(max_length=100)
     photo_b64 = models.TextField()
     created_at = models.DateField(default=timezone.now, verbose_name="Date creation")
 
@@ -11,4 +12,4 @@ class Photo(models.Model):
         ordering = ['created_at']
 
     def __str__(self):
-        return self.photo_b64
+        return self.title
