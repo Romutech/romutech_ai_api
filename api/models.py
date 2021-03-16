@@ -4,8 +4,8 @@ from django.db import models
 
 class Photo(models.Model):
     title = models.CharField(max_length=100)
-    photo_b64 = models.TextField()
-    created_at = models.DateField(default=timezone.now, verbose_name="Date creation")
+    photo_b64 = models.TextField(null=True)
+    created_at = models.DateField(default=timezone.now, verbose_name="Date creation", null=True)
 
     class Meta:
         verbose_name = "Photo"
