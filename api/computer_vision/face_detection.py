@@ -4,7 +4,7 @@ import io
 
 
 
-from PIL import Image, ImageDraw
+from PIL import Image
 
 
 

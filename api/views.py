@@ -13,6 +13,9 @@ class PhotoViewSet(CreateListMixin, ModelViewSet):
     """
     queryset = Photo.objects.all()
     serializer_class = PhotoSerializer
+    print("==>")
+    print(queryset)
+    print("<==")
 
 
 def p(request):
