@@ -15,7 +15,8 @@ def face_detection(p):
    bytes = bytearray(b64decode(p))
    image = Image.open(io.BytesIO(bytes))
    image.save('api/computer_vision/assets/photo.png')
-   frame = cv2.img(Image.open(io.BytesIO(bytes)))
+   frame = cv2.imread("api/computer_vision/assets/photo.png")
+   #frame = cv2.img(Image.open(io.BytesIO(bytes)))
 
    # Convert to black-and-white
    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)

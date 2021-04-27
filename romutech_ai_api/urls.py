@@ -20,12 +20,13 @@ from api import views
 
 
 router = routers.DefaultRouter()
-router.register(r'photos', views.PhotoViewSet)
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls)),
+    path('photos/save', views.photo_list),
+    path('photos', views.PhotoViewSet),
     path('api-auth/', include('rest_framework.urls')),
-    path('p/', views.p),
+
+
 ]
